@@ -1,0 +1,39 @@
+# Git 推送设置说明
+
+## 方法一：使用 HTTPS（推荐先尝试）
+
+1. 确保将下面命令中的 <your-github-username> 替换为您的实际 GitHub 用户名：
+
+```bash
+cd "D:\java project\platform-web"
+git remote set-url origin https://github.com/<your-github-username>/wanbangxinyue.github.io.git
+git push -u origin master
+```
+
+## 方法二：如果 HTTPS 方式存在问题，使用 SSH
+
+1. 在 GitHub 上添加您的 SSH 密钥：
+   - 生成 SSH 密钥（如果还没有）：
+     ```bash
+     ssh-keygen -t ed25519 -C "your_email@example.com"
+     ```
+   - 复制公钥内容：
+     ```bash
+     cat ~/.ssh/id_ed25519.pub
+     ```
+   - 在 GitHub 上添加此公钥到您的账户（Settings -> SSH and GPG keys）
+
+2. 更改远程仓库 URL 为 SSH 格式：
+```bash
+cd "D:\java project\platform-web"
+git remote set-url origin git@github.com:<your-github-username>/wanbangxinyue.github.io.git
+git push -u origin master
+```
+
+## 推送后检查
+
+推送完成后：
+1. 访问您的 GitHub 仓库页面
+2. 确认文件已成功上传
+3. 在 Settings -> Pages 中检查 GitHub Pages 设置
+4. 确保 Source 设置为 Deploy from branch，分支选择 master
