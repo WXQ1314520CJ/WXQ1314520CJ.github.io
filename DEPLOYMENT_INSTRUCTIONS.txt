@@ -1,0 +1,50 @@
+# GitHub Pages 部署指南
+
+## 初始化本地仓库并推送代码
+
+1. 在项目根目录打开命令行工具（Git Bash/终端）
+
+2. 初始化Git仓库：
+```bash
+git init
+```
+
+3. 添加所有文件到暂存区：
+```bash
+git add .
+```
+
+4. 提交更改：
+```bash
+git commit -m "Initial commit"
+```
+
+5. 添加远程仓库（替换 <username> 为您的GitHub用户名）：
+```bash
+git remote add origin https://github.com/<username>/wanbangxinyue.github.io.git
+```
+
+6. 推送代码到GitHub：
+```bash
+git branch -M main
+git push -u origin main
+```
+
+## 启用GitHub Pages
+
+1. 在GitHub上进入您的仓库页面
+2. 点击 "Settings" 选项卡
+3. 向下滚动到 "Pages" 部分
+4. 在 "Source" 下拉菜单中选择 "main" 分支
+5. 点击 "Save"
+6. 等待几分钟，您的网站将在 https://<username>.github.io/wanbangxinyue.github.io 上线
+
+## 使用自定义域名（可选）
+
+如果您有自己的域名，可以在仓库根目录创建一个名为 CNAME 的文件，内容为您的域名：
+```
+wanbangxinyue.com
+```
+
+然后在您的域名提供商处添加以下DNS记录：
+- CNAME记录指向：<username>.github.io
