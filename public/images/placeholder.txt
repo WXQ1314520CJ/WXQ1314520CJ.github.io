@@ -1,0 +1,11 @@
+请将图片下载并保存为:
+1. logo.png (用于Navbar组件)
+2. hero-bg.png (用于Hero组件背景)
+3. banner-bg.jpg (用于Teachers组件背景)
+
+文件应保存在 public/images/ 目录下。
+
+已添加的老师图片:
+- sun teacher.png (孙老师)
+- li teacher.png (李老师)
+- derong teacher.png (德荣老师)
